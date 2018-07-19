@@ -834,7 +834,7 @@ window.onload = function () {
 
 $('#actividad-exc').change(function () {
     //obtenemos un array con los datos del archivo
-    var file = $("actividad-exc")[0].files[0];
+    var file = $("#actividad-exc")[0].files[0];
     //obtenemos el nombre del archivo
     var fileName = file.name;
     //obtenemos la extensión del archivo
