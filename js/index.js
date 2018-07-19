@@ -855,7 +855,7 @@ $('.subirAudio').click(function () {
     var message = "";
     //hacemos la petición ajax  
     $.ajax({
-        url: 'subir.php',
+        url: ' ../php/subir.php',
         type: 'POST',
         // Form data
         //datos del formulario
