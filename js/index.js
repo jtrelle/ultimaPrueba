@@ -900,7 +900,7 @@ $('.AgregarAudio').click(function () {
         //si ha ocurrido un error
         error: function () {
             message = $("<span>Ha ocurrido un error.</span>");
-            showMessageA(message);
+            showMessage(message);
         }
     });
 });
