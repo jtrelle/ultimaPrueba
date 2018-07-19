@@ -885,7 +885,7 @@ $('.AgregarAudio').click(function () {
         //mientras enviamos el archivo
         beforeSend: function () {
             message = $("<span\>Subiendo el audio, por favor espere...</span>");
-            showMessageA(message)
+            showMessage(message);
         },
         //una vez finalizado correctamente
         success: function (data) {
