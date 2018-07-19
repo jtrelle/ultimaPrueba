@@ -835,8 +835,10 @@ window.onload = function () {
 $('#actividad-exc').change(function () {
     //obtenemos un array con los datos del archivo
     var file = $("#actividad-exc")[0].files[0];
+	  alert(file);
     //obtenemos el nombre del archivo
     var fileName = file.name;
+	     alert(fileName);
     //obtenemos la extensión del archivo
     fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
     //obtenemos el tamaño del archivo
@@ -850,9 +852,11 @@ $('#actividad-exc').change(function () {
 
 $('#actividad-exc2').change(function () {
     //obtenemos un array con los datos del archivo
-    var file = $("#actividad-exc")[0].files[0];
+    var file = $("#actividad-exc2")[0].files[0];
+	  alert(file);
     //obtenemos el nombre del archivo
     var fileName = file.name;
+	     alert(fileName);
     //obtenemos la extensión del archivo
     fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
     //obtenemos el tamaño del archivo
@@ -860,7 +864,7 @@ $('#actividad-exc2').change(function () {
     //obtenemos el tipo de archivo image/png ejemplo
     var fileType = file.type;
     //mensaje con la información del archivo
-   // showMessageA("<span>Archivo para subir: " + fileName + ", peso total: " + fileSize + " bytes.</span>");
+   showMessage("<span>Archivo para subir: " + fileName + ", peso total: " + fileSize + " bytes.</span>");
 });
 
 $('.AgregarAudio').click(function () {
@@ -885,8 +889,9 @@ $('.AgregarAudio').click(function () {
         },
         //una vez finalizado correctamente
         success: function (data) {
+		alert("Inserto audio");
             message = $("<span\>El audio ha subido correctamente.</span>");
-            showMessageA(message);
+            showMessage(message);
             if (isImage(fileExtension)) {
                 $(".fondoAudio").html("<audio controls><source src='../audio/" + data + "' type='audio/mp3'></audio>");
             
@@ -901,7 +906,7 @@ $('.AgregarAudio').click(function () {
 });
 
 
-function showMessageA(message) {
+function showMessage(message) {
     $(".messagesA").html("").show();
     $(".messagesA").html(message);
 }
